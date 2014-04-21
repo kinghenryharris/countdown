@@ -21,6 +21,7 @@
 		63E131F21905894500682160 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E131D41905894500682160 /* UIKit.framework */; };
 		63E131FA1905894500682160 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63E131F81905894500682160 /* InfoPlist.strings */; };
 		63E131FC1905894500682160 /* CountDownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E131FB1905894500682160 /* CountDownTests.m */; };
+		BAADF377190599B500294BFB /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAADF376190599B500294BFB /* TimerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		63E131F71905894500682160 /* CountDownTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CountDownTests-Info.plist"; sourceTree = "<group>"; };
 		63E131F91905894500682160 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		63E131FB1905894500682160 /* CountDownTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownTests.m; sourceTree = "<group>"; };
+		BAADF375190599B500294BFB /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		BAADF376190599B500294BFB /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				63E131E21905894500682160 /* Main.storyboard */,
 				63E131E51905894500682160 /* ViewController.h */,
 				63E131E61905894500682160 /* ViewController.m */,
+				BAADF375190599B500294BFB /* TimerViewController.h */,
+				BAADF376190599B500294BFB /* TimerViewController.m */,
 				63E131E81905894500682160 /* Images.xcassets */,
 				63E131D71905894500682160 /* Supporting Files */,
 			);
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAADF377190599B500294BFB /* TimerViewController.m in Sources */,
 				63E131E71905894500682160 /* ViewController.m in Sources */,
 				63E131E11905894500682160 /* AppDelegate.m in Sources */,
 				63E131DD1905894500682160 /* main.m in Sources */,
@@ -456,6 +462,7 @@
 				63E132011905894500682160 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63E132021905894500682160 /* Build configuration list for PBXNativeTarget "CountDownTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +471,7 @@
 				63E132041905894500682160 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
