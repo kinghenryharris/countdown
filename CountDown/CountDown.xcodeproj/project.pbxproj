@@ -21,6 +21,7 @@
 		BAADF3A61905A49E00294BFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAADF3881905A49D00294BFB /* UIKit.framework */; };
 		BAADF3AE1905A49E00294BFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAADF3AC1905A49E00294BFB /* InfoPlist.strings */; };
 		BAADF3B01905A49E00294BFB /* CountDownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAADF3AF1905A49E00294BFB /* CountDownTests.m */; };
+		BAADF3BB1905B79900294BFB /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAADF3BA1905B79900294BFB /* GameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		BAADF3AB1905A49E00294BFB /* CountDownTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CountDownTests-Info.plist"; sourceTree = "<group>"; };
 		BAADF3AD1905A49E00294BFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAADF3AF1905A49E00294BFB /* CountDownTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownTests.m; sourceTree = "<group>"; };
+		BAADF3B91905B79900294BFB /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		BAADF3BA1905B79900294BFB /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				BAADF3961905A49D00294BFB /* Main.storyboard */,
 				BAADF3991905A49D00294BFB /* ViewController.h */,
 				BAADF39A1905A49D00294BFB /* ViewController.m */,
+				BAADF3B91905B79900294BFB /* GameViewController.h */,
+				BAADF3BA1905B79900294BFB /* GameViewController.m */,
 				BAADF39C1905A49D00294BFB /* Images.xcassets */,
 				BAADF38B1905A49D00294BFB /* Supporting Files */,
 			);
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAADF3BB1905B79900294BFB /* GameViewController.m in Sources */,
 				BAADF39B1905A49D00294BFB /* ViewController.m in Sources */,
 				BAADF3951905A49D00294BFB /* AppDelegate.m in Sources */,
 				BAADF3911905A49D00294BFB /* main.m in Sources */,
@@ -456,6 +462,7 @@
 				BAADF3B51905A49E00294BFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAADF3B61905A49E00294BFB /* Build configuration list for PBXNativeTarget "CountDownTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +471,7 @@
 				BAADF3B81905A49E00294BFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
