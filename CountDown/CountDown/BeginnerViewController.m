@@ -15,13 +15,26 @@
 
 @implementation BeginnerViewController
 
-@synthesize timeLabel, score, minus1, minus10, minus100, minus1000, prompt, resetButton;
+@synthesize timeLabel, score, minus1, minus10, minus100, minus1000, prompt, resetButton, best;
 
 double elapsed;
 static int count = 0;
 
+
+- (BOOL)newHighScore {
+    if(elapsed < [[NSUserDefaults standardUserDefaults] doubleForKey: @"beginnerHighScore"]) {
+        [[NSUserDefaults standardUserDefaults] setDouble:elapsed forKey:@"beginnerHighScore"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        return YES;
+    }
+    return NO;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if([[NSUserDefaults standardUserDefaults] doubleForKey:@"beginnerHighScore"] != 99999)
+        best.text = [NSString stringWithFormat:@"%.03f", [[NSUserDefaults standardUserDefaults] doubleForKey:@"beginnerHighScore"]];
+    else
+        best.text = @"NA";
     self.view.backgroundColor = [UIColor blackColor];
     resetButton.hidden = true;
     resetButton.enabled = false;
@@ -104,8 +117,14 @@ static int count = 0;
     if(count == 0) {
         [self stop];
         self.view.backgroundColor = [UIColor greenColor];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Win" message:[NSString stringWithFormat:@"Yay, you won with a time of %.3f seconds!", elapsed] delegate:self cancelButtonTitle:@"Play Again" otherButtonTitles:nil];
-        [alert show];
+        if([self newHighScore]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"New High Score!" message:[NSString stringWithFormat:@"You set a new highscore with a time of %.3f seconds!", elapsed] delegate:self cancelButtonTitle:@"Play Again" otherButtonTitles:nil];
+            [alert show];
+        }
+        else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Win" message:[NSString stringWithFormat:@"Yay, you won with a time of %.3f seconds", elapsed] delegate:self cancelButtonTitle:@"Play Again" otherButtonTitles:nil];
+            [alert show];
+        }
         
     }
     else if(count < 0) {
@@ -115,6 +134,7 @@ static int count = 0;
         [alert show];
     }
 }
+
 - (void)start {
     running = true;
     startTime = [NSDate timeIntervalSinceReferenceDate];

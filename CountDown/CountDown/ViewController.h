@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *scores;
+@property (weak, nonatomic) IBOutlet UIButton *play;
 
 @end

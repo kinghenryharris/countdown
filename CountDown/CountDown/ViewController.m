@@ -14,9 +14,14 @@
 
 @implementation ViewController
 
+@synthesize scores, play;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    play.layer.cornerRadius = 10;
+    play.clipsToBounds = YES;
+    scores.layer.cornerRadius = 10;
+    scores.clipsToBounds = YES;
 }
 
 @end

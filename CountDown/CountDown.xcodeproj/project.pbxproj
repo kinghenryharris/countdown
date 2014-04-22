@@ -24,6 +24,8 @@
 		BAADF3B01905A49E00294BFB /* CountDownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAADF3AF1905A49E00294BFB /* CountDownTests.m */; };
 		BAFA5FB91906B58C00113DC9 /* IntermediateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFA5FB81906B58C00113DC9 /* IntermediateViewController.m */; };
 		BAFA5FBC1906B5AF00113DC9 /* ExpertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFA5FBB1906B5AF00113DC9 /* ExpertViewController.m */; };
+		BAFA5FBF1907268300113DC9 /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFA5FBE1907268300113DC9 /* PlayViewController.m */; };
+		BAFA5FC219072D5000113DC9 /* ScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFA5FC119072D5000113DC9 /* ScoresViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,10 @@
 		BAFA5FB81906B58C00113DC9 /* IntermediateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntermediateViewController.m; sourceTree = "<group>"; };
 		BAFA5FBA1906B5AF00113DC9 /* ExpertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertViewController.h; sourceTree = "<group>"; };
 		BAFA5FBB1906B5AF00113DC9 /* ExpertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertViewController.m; sourceTree = "<group>"; };
+		BAFA5FBD1907268300113DC9 /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
+		BAFA5FBE1907268300113DC9 /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
+		BAFA5FC019072D5000113DC9 /* ScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresViewController.h; sourceTree = "<group>"; };
+		BAFA5FC119072D5000113DC9 /* ScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,10 @@
 				BAFA5FB81906B58C00113DC9 /* IntermediateViewController.m */,
 				BAFA5FBA1906B5AF00113DC9 /* ExpertViewController.h */,
 				BAFA5FBB1906B5AF00113DC9 /* ExpertViewController.m */,
+				BAFA5FBD1907268300113DC9 /* PlayViewController.h */,
+				BAFA5FBE1907268300113DC9 /* PlayViewController.m */,
+				BAFA5FC019072D5000113DC9 /* ScoresViewController.h */,
+				BAFA5FC119072D5000113DC9 /* ScoresViewController.m */,
 				BAADF39C1905A49D00294BFB /* Images.xcassets */,
 				BAADF38B1905A49D00294BFB /* Supporting Files */,
 			);
@@ -270,6 +280,8 @@
 				BAADF3911905A49D00294BFB /* main.m in Sources */,
 				BAFA5FBC1906B5AF00113DC9 /* ExpertViewController.m in Sources */,
 				BAFA5FB91906B58C00113DC9 /* IntermediateViewController.m in Sources */,
+				BAFA5FBF1907268300113DC9 /* PlayViewController.m in Sources */,
+				BAFA5FC219072D5000113DC9 /* ScoresViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,15 +15,23 @@
 
 @implementation IntermediateViewController
 
-@synthesize timeLabel, score, minus1, minus10, minus100, minus1000, prompt, resetButton;
+@synthesize timeLabel, score, minus1, minus10, minus100, minus1000, prompt, resetButton, best;
 
 double elapsed;
 static int count = 0;
 - (void)viewDidLayoutSubviews {
     [self shuffle];
 }
+- (BOOL)newHighScore {
+    if(elapsed < [[NSUserDefaults standardUserDefaults] doubleForKey: @"intermediateHighScore"]) {
+        [[NSUserDefaults standardUserDefaults] setDouble:elapsed forKey:@"intermediateHighScore"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        return YES;
+    }
+    return NO;
+}
 -(void)shuffle {
-    NSMutableArray *arrayButtons = [NSMutableArray arrayWithObjects:[NSValue valueWithCGRect:CGRectMake(110,248,100,50)], [NSValue valueWithCGRect:CGRectMake(110,306,100,50)], [NSValue valueWithCGRect:CGRectMake(110,364,100,50)], [NSValue valueWithCGRect:CGRectMake(110,422,100,50)], nil];
+    NSMutableArray *arrayButtons = [NSMutableArray arrayWithObjects:[NSValue valueWithCGRect:CGRectMake(110,193,100,50)], [NSValue valueWithCGRect:CGRectMake(110,251,100,50)], [NSValue valueWithCGRect:CGRectMake(110,309,100,50)], [NSValue valueWithCGRect:CGRectMake(110,367,100,50)], nil];
     NSUInteger count = [arrayButtons count];
     for (NSUInteger i = 0; i < count; ++i) {
         NSUInteger nElements = count - i;
@@ -39,6 +47,11 @@ static int count = 0;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+        if([[NSUserDefaults standardUserDefaults] doubleForKey:@"intermediateHighScore"] != 99999)
+    best.text = [NSString stringWithFormat:@"%.03f", [[NSUserDefaults standardUserDefaults] doubleForKey:@"intermediateHighScore"]];
+    else
+        best.text = @"NA";
+    NSLog(@"%li", (long)[[NSUserDefaults standardUserDefaults] integerForKey: @"intermediateHighScore"]);
     self.view.backgroundColor = [UIColor blackColor];
     resetButton.hidden = true;
     resetButton.enabled = false;
@@ -121,8 +134,14 @@ static int count = 0;
     if(count == 0) {
         [self stop];
         self.view.backgroundColor = [UIColor greenColor];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Win" message:[NSString stringWithFormat:@"Yay, you won with a time of %.3f seconds!", elapsed] delegate:self cancelButtonTitle:@"Play Again" otherButtonTitles:nil];
-        [alert show];
+        if([self newHighScore]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"New High Score!" message:[NSString stringWithFormat:@"You set a new highscore with a time of %.3f seconds!", elapsed] delegate:self cancelButtonTitle:@"Play Again" otherButtonTitles:nil];
+            [alert show];
+        }
+        else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Win" message:[NSString stringWithFormat:@"Yay, you won with a time of %.3f seconds", elapsed] delegate:self cancelButtonTitle:@"Play Again" otherButtonTitles:nil];
+            [alert show];
+        }
         
     }
     else if(count < 0) {

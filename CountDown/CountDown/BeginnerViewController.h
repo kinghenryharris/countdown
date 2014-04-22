@@ -17,6 +17,7 @@
 - (IBAction)minus100:(id)sender;
 - (IBAction)minus10:(id)sender;
 - (IBAction)minus1:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *best;
 - (IBAction)reset:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *prompt;
 @property (weak, nonatomic) IBOutlet UIButton *minus1;

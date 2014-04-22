@@ -12,7 +12,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
+    {
+    }
+    else
+    {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSUserDefaults standardUserDefaults] setDouble:99999 forKey:@"beginnerHighScore"];
+        [[NSUserDefaults standardUserDefaults] setDouble:99999 forKey:@"intermediateHighScore"];
+        [[NSUserDefaults standardUserDefaults] setDouble:99999 forKey:@"expertHighScore"];
+    }
     return YES;
 }
 							
