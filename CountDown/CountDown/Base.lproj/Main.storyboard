@@ -59,9 +59,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TO5-NG-PCo">
-                                <rect key="frame" x="137" y="174" width="62" height="30"/>
+                                <rect key="frame" x="129" y="131" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Beginner">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -69,9 +70,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFW-xb-nKU">
-                                <rect key="frame" x="145" y="274" width="86" height="30"/>
+                                <rect key="frame" x="117" y="226" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Intermediate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -79,22 +81,38 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERM-PY-Gx0">
-                                <rect key="frame" x="145" y="390" width="45" height="30"/>
+                                <rect key="frame" x="138" y="337" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Expert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="Z77-4n-5II" kind="modal" animates="NO" id="qQy-K2-nPj"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDx-CS-fRn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Play" id="jdI-MN-ydj">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="0Yw-dI-IRa">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="modal" animates="NO" id="6r1-yp-vCo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0g7-q4-XUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="-422"/>
+            <point key="canvasLocation" x="719" y="-473"/>
         </scene>
         <!--Beginner View Controller-->
         <scene sceneID="4up-Md-qeS">
@@ -256,10 +274,10 @@
             </objects>
             <point key="canvasLocation" x="963" y="14"/>
         </scene>
-        <!--Beginner View Controller-->
+        <!--Expert View Controller-->
         <scene sceneID="SNa-fz-Eni">
             <objects>
-                <viewController id="Z77-4n-5II" customClass="BeginnerViewController" sceneMemberID="viewController">
+                <viewController id="Z77-4n-5II" customClass="ExpertViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0xa-4n-E5z"/>
                         <viewControllerLayoutGuide type="bottom" id="Lqb-oA-MFq"/>
@@ -292,7 +310,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="minus1:" destination="Z77-4n-5II" eventType="touchUpInside" id="cKv-RX-9ij"/>
+                                    <action selector="minus1:" destination="Z77-4n-5II" eventType="touchUpInside" id="jUp-KB-Nd3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYW-f5-tb4">
@@ -305,7 +323,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="minus10:" destination="Z77-4n-5II" eventType="touchUpInside" id="qDl-Au-TxJ"/>
+                                    <action selector="minus10:" destination="Z77-4n-5II" eventType="touchUpInside" id="xgu-wT-iwz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTP-i8-bge">
@@ -318,7 +336,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="minus100:" destination="Z77-4n-5II" eventType="touchUpInside" id="SXj-5y-bRV"/>
+                                    <action selector="minus100:" destination="Z77-4n-5II" eventType="touchUpInside" id="Sma-QY-1hb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZT-sr-tmC">
@@ -332,7 +350,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="minus1000:" destination="Z77-4n-5II" eventType="touchUpInside" id="fAW-Yd-UIj"/>
+                                    <action selector="minus1000:" destination="Z77-4n-5II" eventType="touchUpInside" id="1UN-Th-2dR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press a button to begin..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae0-C9-Fuj">
@@ -352,7 +370,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="reset:" destination="Z77-4n-5II" eventType="touchUpInside" id="tNi-ns-OUS"/>
+                                    <action selector="reset:" destination="Z77-4n-5II" eventType="touchUpInside" id="99z-0t-chm"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hp4-ey-we6">
@@ -380,19 +398,19 @@
                         <outlet property="minus100" destination="BTP-i8-bge" id="lPq-ZJ-9Ss"/>
                         <outlet property="minus1000" destination="6ZT-sr-tmC" id="hE1-0w-oDb"/>
                         <outlet property="prompt" destination="ae0-C9-Fuj" id="Mh8-6D-ybv"/>
-                        <outlet property="resetButton" destination="hmj-O6-ppE" id="YtR-tY-nRm"/>
-                        <outlet property="score" destination="ySV-L6-Y8m" id="Xjk-DX-fyh"/>
-                        <outlet property="timeLabel" destination="aLu-el-nZt" id="bpZ-iA-UW8"/>
+                        <outlet property="resetButton" destination="hmj-O6-ppE" id="YMx-Tz-VrH"/>
+                        <outlet property="score" destination="ySV-L6-Y8m" id="6MN-hy-YyC"/>
+                        <outlet property="timeLabel" destination="aLu-el-nZt" id="y5d-6V-Cdf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9g-jB-btK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="580" y="369"/>
         </scene>
-        <!--Beginner View Controller-->
+        <!--Intermediate View Controller-->
         <scene sceneID="hSh-M1-dhn">
             <objects>
-                <viewController id="xA2-0Y-1FD" customClass="BeginnerViewController" sceneMemberID="viewController">
+                <viewController id="xA2-0Y-1FD" customClass="IntermediateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kZX-o4-rtY"/>
                         <viewControllerLayoutGuide type="bottom" id="ldM-eC-OUv"/>
@@ -425,7 +443,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="minus1:" destination="xA2-0Y-1FD" eventType="touchUpInside" id="yKk-bK-f4G"/>
+                                    <action selector="minus1:" destination="xA2-0Y-1FD" eventType="touchUpInside" id="WP4-T5-Q67"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lE2-kl-P9g">
@@ -438,7 +456,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="minus10:" destination="xA2-0Y-1FD" eventType="touchUpInside" id="YON-Ig-dmV"/>
+                                    <action selector="minus10:" destination="xA2-0Y-1FD" eventType="touchUpInside" id="g5D-Pc-77q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmu-a2-5l7">
@@ -451,7 +469,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="minus100:" destination="xA2-0Y-1FD" eventType="touchUpInside" id="Yqh-mv-ZeZ"/>
+                                    <action selector="minus100:" destination="xA2-0Y-1FD" eventType="touchUpInside" id="ntv-UR-niv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4X-q2-tAB">
@@ -465,7 +483,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="minus1000:" destination="xA2-0Y-1FD" eventType="touchUpInside" id="MAW-QT-aNa"/>
+                                    <action selector="minus1000:" destination="xA2-0Y-1FD" eventType="touchUpInside" id="eW4-7K-b4X"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press a button to begin..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PX3-CZ-5z1">
@@ -485,7 +503,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="reset:" destination="xA2-0Y-1FD" eventType="touchUpInside" id="IMU-aH-yQ8"/>
+                                    <action selector="reset:" destination="xA2-0Y-1FD" eventType="touchUpInside" id="a5A-Mi-emi"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mc5-0n-5Kx">
@@ -512,10 +530,10 @@
                         <outlet property="minus10" destination="lE2-kl-P9g" id="BQs-o8-qOj"/>
                         <outlet property="minus100" destination="Mmu-a2-5l7" id="QJ8-Ac-3co"/>
                         <outlet property="minus1000" destination="k4X-q2-tAB" id="b7d-Fl-1Ou"/>
-                        <outlet property="prompt" destination="PX3-CZ-5z1" id="kGR-JU-wwI"/>
-                        <outlet property="resetButton" destination="x5S-ku-1ux" id="pUB-Ss-EJA"/>
-                        <outlet property="score" destination="5N0-Zk-5bL" id="dtY-5l-ywF"/>
-                        <outlet property="timeLabel" destination="QQu-X5-2W8" id="Wgp-OR-Hwg"/>
+                        <outlet property="prompt" destination="PX3-CZ-5z1" id="iCH-Ho-5Dr"/>
+                        <outlet property="resetButton" destination="x5S-ku-1ux" id="Arz-QR-oa3"/>
+                        <outlet property="score" destination="5N0-Zk-5bL" id="IFa-x3-IrG"/>
+                        <outlet property="timeLabel" destination="QQu-X5-2W8" id="y5w-yR-Ak7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLh-zo-BuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -529,6 +547,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UnI-LI-vXh"/>
+        <segue reference="JR2-GW-NVe"/>
     </inferredMetricsTieBreakers>
 </document>

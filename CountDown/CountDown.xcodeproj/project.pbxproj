@@ -22,6 +22,8 @@
 		BAADF3A61905A49E00294BFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAADF3881905A49D00294BFB /* UIKit.framework */; };
 		BAADF3AE1905A49E00294BFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAADF3AC1905A49E00294BFB /* InfoPlist.strings */; };
 		BAADF3B01905A49E00294BFB /* CountDownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAADF3AF1905A49E00294BFB /* CountDownTests.m */; };
+		BAFA5FB91906B58C00113DC9 /* IntermediateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFA5FB81906B58C00113DC9 /* IntermediateViewController.m */; };
+		BAFA5FBC1906B5AF00113DC9 /* ExpertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFA5FBB1906B5AF00113DC9 /* ExpertViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		BAADF3AB1905A49E00294BFB /* CountDownTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CountDownTests-Info.plist"; sourceTree = "<group>"; };
 		BAADF3AD1905A49E00294BFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAADF3AF1905A49E00294BFB /* CountDownTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownTests.m; sourceTree = "<group>"; };
+		BAFA5FB71906B58C00113DC9 /* IntermediateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntermediateViewController.h; sourceTree = "<group>"; };
+		BAFA5FB81906B58C00113DC9 /* IntermediateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntermediateViewController.m; sourceTree = "<group>"; };
+		BAFA5FBA1906B5AF00113DC9 /* ExpertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertViewController.h; sourceTree = "<group>"; };
+		BAFA5FBB1906B5AF00113DC9 /* ExpertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,10 @@
 				BAADF39A1905A49D00294BFB /* ViewController.m */,
 				BA9E47671905F4AC000B972D /* BeginnerViewController.h */,
 				BA9E47681905F4AC000B972D /* BeginnerViewController.m */,
+				BAFA5FB71906B58C00113DC9 /* IntermediateViewController.h */,
+				BAFA5FB81906B58C00113DC9 /* IntermediateViewController.m */,
+				BAFA5FBA1906B5AF00113DC9 /* ExpertViewController.h */,
+				BAFA5FBB1906B5AF00113DC9 /* ExpertViewController.m */,
 				BAADF39C1905A49D00294BFB /* Images.xcassets */,
 				BAADF38B1905A49D00294BFB /* Supporting Files */,
 			);
@@ -258,6 +268,8 @@
 				BA9E47691905F4AC000B972D /* BeginnerViewController.m in Sources */,
 				BAADF3951905A49D00294BFB /* AppDelegate.m in Sources */,
 				BAADF3911905A49D00294BFB /* main.m in Sources */,
+				BAFA5FBC1906B5AF00113DC9 /* ExpertViewController.m in Sources */,
+				BAFA5FB91906B58C00113DC9 /* IntermediateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

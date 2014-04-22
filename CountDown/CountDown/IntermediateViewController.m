@@ -6,20 +6,37 @@
 //  Copyright (c) 2014 Dummy Code. All rights reserved.
 //
 
-#import "BeginnerViewController.h"
+#import "IntermediateViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface BeginnerViewController ()
+@interface IntermediateViewController ()
 
 @end
 
-@implementation BeginnerViewController
+@implementation IntermediateViewController
 
 @synthesize timeLabel, score, minus1, minus10, minus100, minus1000, prompt, resetButton;
 
 double elapsed;
 static int count = 0;
+- (void)viewDidLayoutSubviews {
+    [self shuffle];
+}
+-(void)shuffle {
+    NSMutableArray *arrayButtons = [NSMutableArray arrayWithObjects:[NSValue valueWithCGRect:CGRectMake(110,248,100,50)], [NSValue valueWithCGRect:CGRectMake(110,306,100,50)], [NSValue valueWithCGRect:CGRectMake(110,364,100,50)], [NSValue valueWithCGRect:CGRectMake(110,422,100,50)], nil];
+    NSUInteger count = [arrayButtons count];
+    for (NSUInteger i = 0; i < count; ++i) {
+        NSUInteger nElements = count - i;
+        NSUInteger n = (arc4random() % nElements) + i;
+        [arrayButtons exchangeObjectAtIndex:i withObjectAtIndex:n];
+    }
+    NSLog(@"%@", [arrayButtons description]);
+    [minus1 setFrame:[((NSValue *)[arrayButtons objectAtIndex:0]) CGRectValue]];
+    [minus10 setFrame:[((NSValue *)[arrayButtons objectAtIndex:1]) CGRectValue]];
+    [minus100 setFrame:[((NSValue *)[arrayButtons objectAtIndex:2]) CGRectValue]];
+    [minus1000 setFrame:[((NSValue *)[arrayButtons objectAtIndex:3]) CGRectValue]];
 
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
@@ -139,6 +156,7 @@ static int count = 0;
     else {
         if(elapsed > 1000) {
             [self stop];
+            self.view.backgroundColor = [UIColor redColor];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Lost" message:@"Whoops, you took way too long" delegate:self cancelButtonTitle:@"Play Again" otherButtonTitles:nil];
             [alert show];
         } else {
@@ -151,6 +169,7 @@ static int count = 0;
 -(void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0){
         [self viewDidLoad];
+        [self viewDidLayoutSubviews];
     }
 }
 @end
